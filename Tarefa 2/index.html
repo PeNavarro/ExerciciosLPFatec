@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Flex</title>
+</head>
+<body>
+    <div class="content">
+        <div class="row">
+            <div class="header">
+                <p>Header</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="aside">
+                <p>Aside</p>
+            </div>
+            <div class="article">
+                <p>Article</p>
+                <div class="row">
+                    <div class="articleImage">
+                        <p>Image</p>
+                    </div>
+                    <div class="articleImage">
+                        <p>Image</p>
+                    </div>
+                    <div class="articleImage">
+                        <p>Image</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="footer">
+                <p>Footer</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }   
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-weight: 700;
+            font-size: 32px;
+        }
+
+        .content{
+            padding: 3rem;
+            background-color: #fdafb1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .header{
+            text-align: center;
+            background-color: #98d1c7;
+            padding: 30px;
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
+        .aside{
+            width: 30%;
+            height: 650px;
+            background-color: #62b7b6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .article{
+            width: 65%;
+            background-color: #fa7a7b;
+            height: 650px;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+        }
+
+        .article .row{
+            gap: 2rem;
+            margin-top: 1rem;
+        }
+
+        .articleImage{
+            background-color: #d6d5d5;
+            width: 100%;
+            aspect-ratio: 1/1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .footer{
+            text-align: center;
+            background-color: #98d1c7;
+            padding: 30px;
+            width: 100%;
+            margin-top: 3rem;
+        }
+    </style>
+</body>
+</html>
