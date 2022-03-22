@@ -1,0 +1,164 @@
+*{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+img{
+      width: 100%;
+      height: auto;
+}
+
+body{
+      padding-bottom: 2rem;
+}
+
+.container{
+      max-width: 1344px;
+      margin: 0 auto;
+}
+
+header{
+      margin-top: 2rem;
+      text-align: center;
+}
+
+header h1{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 40px;
+      margin-top: 1rem;
+}
+
+.content{
+      text-align: center;
+      margin-top: 45px;
+      background: #F8F8F8;
+      box-shadow: 0px 7px 12px 2px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      padding: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+}
+
+.content h2{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 32px;
+}
+
+.content p{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      margin-top: 1rem;
+}
+
+.row{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+}
+
+.card{
+      background: #F8F8F8;
+      box-shadow: 0px 3px 5px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 0.6rem;
+      margin-top: 2rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      width: 20%;
+}
+
+.card p{
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      margin-top: 10px;
+}
+
+.price{
+      color: #39B300;
+}
+
+.quantityControl{
+      display: flex;
+      margin: 0 auto;
+      margin-top: 1rem;
+}
+
+.quantityControl span{
+      padding: 7px 13px;
+      font-size: 20px;
+      font-family: 'Roboto';
+      background-color: #F0F0F0;
+}
+
+.minus,
+.plus{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      cursor: pointer;
+      border: none;
+}
+
+form{
+      margin-top: 2rem;
+      width: 100%;
+}
+
+input{
+      font-family: 'Roboto';
+      border: none;
+      border-radius: 5px;
+      width: 68%;
+      margin: 0 auto;
+      font-size: 16px;
+      padding: 10px 20px;
+      margin-bottom: 1rem;
+}
+
+.calc{
+      width: 100%;
+      background-color: #446DFF;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 30px;
+      color: white;
+      border: none;
+      margin-top: 2rem;
+      padding: 8px;
+      border-radius: 5px;
+      cursor: pointer;
+}
+
+.dados{
+      margin-top: 2rem;
+}
+
+.dados p{
+      font-family: 'Roboto';
+      font-size: 18px;
+      margin-bottom: 18px;
+}
+
+.dados p:nth-of-type(1){
+      margin-bottom: 40px;
+}
+
+.dados p:nth-of-type(4){
+      margin-top: 70px;
+      font-size: 22px;
+}
