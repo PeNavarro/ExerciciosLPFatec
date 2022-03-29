@@ -146,6 +146,7 @@ input{
 
 .dados{
       margin-top: 2rem;
+      display: none;
 }
 
 .dados p{

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Menu</title>
 </head>
 <body>
@@ -20,9 +21,9 @@
             <h2>Prato Principal</h2>
             <p>Todos os pratos acompanham arroz, feijão, e a sobremesa do dia.</p>
             <div class="row">
-                <div class="card">
+                <div class="card" id="1">
                     <img src="img/prato1.png" alt="Bife">
-                    <p>Bife com batata</p>
+                    <p class="name">Bife com batata</p>
                     <p class="price">R$ 30,00</p>
 
                     <div class="quantityControl">
@@ -39,9 +40,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="2">
                     <img src="img/prato2.png" alt="Bife">
-                    <p>Bife com batata</p>
+                    <p class="name">Coxa de frango</p>
                     <p class="price">R$ 25,00</p>
 
                     <div class="quantityControl">
@@ -58,9 +59,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="3">
                     <img src="img/prato3.png" alt="Bife">
-                    <p>Bife com batata</p>
+                    <p class="name">Carne de panela</p>
                     <p class="price">R$ 22,00</p>
 
                     <div class="quantityControl">
@@ -80,12 +81,12 @@
             </div>
         </section>
         <section class="content">
-            <h2>Prato Principal</h2>
-            <p>Todos os pratos acompanham arroz, feijão, e a sobremesa do dia.</p>
+            <h2>Acompanhamentos</h2>
+            <p>Porções para uma pessoa</p>
             <div class="row">
-                <div class="card">
+                <div class="card" id="4">
                     <img src="img/prato4.png" alt="Bife">
-                    <p>Bife com batata</p>
+                    <p class="name">Farofa</p>
                     <p class="price">R$ 10,00</p>
 
                     <div class="quantityControl">
@@ -102,9 +103,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="5">
                     <img src="img/prato5.png" alt="Bife">
-                    <p>Bife com batata</p>
+                    <p class="name">Salada</p>
                     <p class="price">R$ 8,00</p>
 
                     <div class="quantityControl">
@@ -121,9 +122,9 @@
                         </button>
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" id="6">
                     <img src="img/prato6.png" alt="Bife">
-                    <p>Bife com batata</p>
+                    <p class="name">Torresmo</p>
                     <p class="price">R$ 12,00</p>
 
                     <div class="quantityControl">
@@ -146,9 +147,9 @@
             <div class="content">
                 <h2>Dados Pessoais</h2>
                 <form action="post">
-                    <input type="text" placeholder="Insira seu nome" required>
-                    <input type="text" placeholder="Insira seu telefone" required>
-                    <input type="email" placeholder="Insira seu email" required>
+                    <input type="text" id="name" placeholder="Insira seu nome" required>
+                    <input type="text" id="tel" placeholder="Insira seu telefone" required>
+                    <input type="email" id="email" placeholder="Insira seu email" required>
                 </form> 
             </div>
             <button class="calc">Calcular</button>
@@ -164,6 +165,6 @@
         </section>
     </div>
 
-    <!-- <script src="js/apaga-acende.js"></script> -->
+    <script src="js/script.js"></script>
 </body>
 </html>
