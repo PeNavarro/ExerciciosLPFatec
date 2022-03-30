@@ -14,7 +14,7 @@ body{
 }
 
 .container{
-      max-width: 1344px;
+      max-width: 1164px;
       margin: 0 auto;
 }
 
@@ -129,7 +129,7 @@ input{
       margin-bottom: 1rem;
 }
 
-.calc{
+#btnEnviar{
       width: 100%;
       background-color: #446DFF;
       font-family: 'Roboto';
@@ -153,6 +153,13 @@ input{
       font-family: 'Roboto';
       font-size: 18px;
       margin-bottom: 18px;
+}
+
+.dados ul li{
+      font-family: 'Roboto';
+      font-size: 18px;
+      margin-bottom: 18px;
+      margin-left: 23px;
 }
 
 .dados p:nth-of-type(1){

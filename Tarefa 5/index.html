@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <title>Menu</title>
 </head>
 <body>
@@ -146,13 +147,13 @@
         <section>
             <div class="content">
                 <h2>Dados Pessoais</h2>
-                <form action="post">
+                <form id="form">
                     <input type="text" id="name" placeholder="Insira seu nome" required>
                     <input type="text" id="tel" placeholder="Insira seu telefone" required>
-                    <input type="email" id="email" placeholder="Insira seu email" required>
+                    <input type="email" id="email" pattern="[^ @]*@[^ @]*" placeholder="Insira seu email" required>
+                    <input type="submit" id="btnEnviar" value="Calcular" required>
                 </form> 
             </div>
-            <button class="calc">Calcular</button>
         </section>
         <section class="dados">
             <p>Caro <b></b></p>
@@ -161,10 +162,11 @@
             <ul>
 
             </ul>
-            <p><b>Preço final R$ </b></p>
+            <p><b></b></p>
         </section>
     </div>
 
     <script src="js/script.js"></script>
+    <script src="js/mask.js"></script>
 </body>
 </html>

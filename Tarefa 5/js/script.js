@@ -19,7 +19,7 @@ for (let i = 0; i < comidas.length; i++) {
             var type = "Acompanhamento"
       }
 
-      let price = $('.card .price')[i].innerHTML
+      var price = $('.card .price')[i].innerHTML
       price = price.replace('R$ ', '')
       price = price.replace(',', '.')
       price = parseFloat(price).toFixed(2)
@@ -44,8 +44,6 @@ for (let i = 0; i < comidas.length; i++) {
             }
 
             $('.card .quantityControl span')[i].innerHTML = comida[i].quantity
-
-            montaPedido()
       })
 
       $('.card .quantityControl .plus')[i].addEventListener('click', () => {
@@ -53,41 +51,48 @@ for (let i = 0; i < comidas.length; i++) {
             comida[i].quantity = newQuantity
 
             $('.card .quantityControl span')[i].innerHTML = comida[i].quantity
-
-            comida[i].total = comida[i].quantity*price
-            comida[i].total = parseFloat(comida[i].total).toFixed(2)
-
-            let totalExibido = comida[i].total.toString().replace('.', ',')
-
-            let precoExibido = comida[i].total.toString().replace('.', ',')
-
-            if(pedido.search(comida[i].name)){
-                  if(comida[i].quantity > 0){
-                        pedido = pedido+`- Quantidade: ${comida[i].quantity} - Total: ${totalExibido}.</li>`
-                  } 
-            }else{
-                  if(comida[i].quantity > 0){
-                        pedido = pedido+`<li>${comida[i].type}: ${comida[i].name} - Preço unitário: R$ ${precoExibido} - Quantidade: ${comida[i].quantity} - Total: ${totalExibido}.</li>`
-                  } 
-            }
-                  
-            console.log(pedido)
       })
 
       
 }
 
-$('.calc')[0].addEventListener('click', ()=>{
-      var formName = $('#name').val()
-      var formTel = $('#tel').val()
-      var formEmail = $('#email').val()
+$('#btnEnviar')[0].addEventListener('click', () => {
 
-      $('.dados')[0].style.display = 'block'
-      $('.dados p:first b').innerHTML = formName
-      
-      console.log(pedido);
+      var formName = $('#name').val()
+
+      var precoFinal = 0
+
+      pedido = ""
+
+      if($('#name')[0].validity.valid && $('#tel')[0].value.length == 15 && $('#email')[0].validity.valid){
+
+            for (let i = 0; i < comidas.length; i++) {
+                  if(comida[i].quantity > 0){
+                        
+                        comida[i].total = comida[i].quantity*comida[i].price
+
+                        precoFinal += comida[i].total
+
+                        comida[i].total = parseFloat(comida[i].total).toFixed(2) 
+
+                        let totalExibido = comida[i].total.toString().replace('.', ',')
+
+                        let precoExibido = comida[i].price.toString().replace('.', ',')
+
+                        pedido = pedido+`<li>${comida[i].type}: ${comida[i].name} - Preço unitário: R$ ${precoExibido} - Quantidade: ${comida[i].quantity} - Total: ${totalExibido}.</li>`
+                  }
+            }
+
+            precoFinal = parseFloat(precoFinal).toFixed(2) 
+            precoFinal = precoFinal.toString().replace('.', ',')
+
+            $('.dados')[0].style.display = 'block'
+            $('.dados p:first b')[0].innerHTML = formName
+            $('.dados ul')[0].innerHTML = pedido
+            $('.dados p:last b')[0].innerHTML = `Preço final R$ ${precoFinal}`
+      }
 })
 
-// for (let index = 0; index < comidas.length; index++) {
-//       console.log(comida[index])
-// }
+$('#form').submit(function (e) {
+      e.preventDefault();
+});
