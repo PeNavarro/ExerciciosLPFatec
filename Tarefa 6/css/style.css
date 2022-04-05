@@ -1,0 +1,74 @@
+#pratos h1{
+      font-weight: 400;
+      font-size: 38px;
+}
+
+#pratos h2{
+      font-weight: 400;
+}
+
+.sombra{
+      box-shadow: 0px 11px 21px 6px rgba(0,0,0,0.1);
+}
+
+.card{
+      padding: 0.5rem;
+}
+
+.card-body{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+}
+
+.card .name{
+      font-weight: 700;
+      text-align: center;
+}
+
+.price{
+      color: #39B300;
+}
+
+.quantityControl{
+      display: flex;
+      margin: 0 auto;
+      margin-top: 1rem;
+}
+
+.quantityControl span{
+      padding: 7px 13px;
+      font-size: 20px;
+      font-family: 'Roboto';
+      background-color: #F0F0F0;
+}
+
+.minus,
+.plus{
+      background-color: white;
+      display: flex;
+      align-items: center;
+      padding: 6px;
+      cursor: pointer;
+      border: none;
+}
+
+#formulario{
+      margin-bottom: 5rem;
+}
+
+#formulario .card-title{
+      padding: 0 1rem;
+}
+
+#formulario .card-title h2{
+      font-size: 26px;
+      font-weight: 400;
+}
+
+#formulario #btnEnviar{
+      position: absolute;
+      left: 50%;
+      bottom: -85px;
+      transform: translateX(-50%);
+}
